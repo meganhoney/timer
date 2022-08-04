@@ -1,7 +1,7 @@
 const times = process.argv.slice(2);
 
 if (times.length === 0) {
-  process.stdout.write('Please input a timer.\n');
+  console.log('Please input a timer.');
 }
 
 for (let time in times) {
@@ -11,6 +11,6 @@ for (let time in times) {
       console.log('(', times[time], ') seconds have elapsed.');
     }, times[time] * 1000);
   } else {
-    process.stdout.write('Please input a valid timer.\n');
+    console.log('Please input a valid timer.');
   }
 }
