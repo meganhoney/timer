@@ -1,7 +1,9 @@
 const times = process.argv.slice(2);
 
 if (times.length === 0) {
-  console.log('Please input a timer.');
+  // console.log('Please input a timer.');
+  // including suggestion from code review to throw error
+  throw Error('No input parameters were provided');
 }
 
 for (let time in times) {
